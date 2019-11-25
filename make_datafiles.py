@@ -94,7 +94,7 @@ def read_text_file(text_file):
   with open(text_file, "r") as f:
     for line in f:
       if chr(13) in line:
-        lines.append(line.replace(chr(13), "").strip())
+        lines.append(line.replace(chr(13), " ").strip())
       else:
         lines.append(line.strip())
   return lines
